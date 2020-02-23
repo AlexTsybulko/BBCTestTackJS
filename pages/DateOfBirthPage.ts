@@ -14,6 +14,7 @@ export class DateOfBirthPage extends BasePage{
     monthOfBirthInput = element(by.id('month-input'));
     yearOfBirthInput = element(by.id('year-input'));
     continueBtn = element(by.id('submit-button'));
+    timeout = 4000;
 
     getRandomDay() {
         return faker.random.number({'min' : 1, 'max' : 28});
@@ -28,14 +29,16 @@ export class DateOfBirthPage extends BasePage{
     }
 
     setRandomDateOfBirth() {
-        this.waitToBeClickable(this.dayOfBirthInput, 2000);
+        this.waitForElementPresent(this.dayOfBirthInput, this.timeout);
+        this.waitToBeClickable(this.dayOfBirthInput, this.timeout);
         this.dayOfBirthInput.sendKeys(this.getRandomDay());
         this.monthOfBirthInput.sendKeys(this.getRandomMonth());
         this.yearOfBirthInput.sendKeys(this.getRandomYear());
     }
 
     clickContinueBtn() {
-        this.waitToBeClickable(this.continueBtn, 4000);
+        this.waitForElementPresent(this.continueBtn, this.timeout);
+        this.waitToBeClickable(this.continueBtn, this.timeout);
         this.continueBtn.click();
     }
 }

@@ -1,4 +1,4 @@
-import {browser, by, element} from "protractor";
+import {browser, by, element, protractor} from "protractor";
 import * as faker from 'faker';
 
 export class RegistrationPage {
@@ -10,6 +10,7 @@ export class RegistrationPage {
 
     setRandomEmail() {
         this.emailInput.sendKeys(faker.internet.email());
+        this.emailInput.sendKeys(protractor.Key.TAB);
     };
 
     getEmailErrorCount() {
@@ -20,13 +21,15 @@ export class RegistrationPage {
         this.setRandomEmail();
         this.getEmailErrorCount().then((count) => {
            if(count > 0) {
-                this.setEmailWithCheckingCorrectness();
+               this.emailInput.clear();
+               this.setEmailWithCheckingCorrectness();
            }
         });
     };
 
     setRandomPassword() {
         this.passwordInput.sendKeys(faker.internet.password());
+        this.passwordInput.sendKeys(protractor.Key.TAB);
     }
 
     getPasswordErrorCount() {
@@ -37,6 +40,7 @@ export class RegistrationPage {
         this.setRandomPassword();
         this.getPasswordErrorCount().then((count) => {
             if(count > 0) {
+                this.passwordInput.clear();
                 this.setPasswordWithCheckingCorrectness();
             }
         });
