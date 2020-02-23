@@ -1,0 +1,30 @@
+{
+  "name": "bbctesttask",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "tsc": "tsc",
+    "pretest": "npm run tsc",
+    "webdriver-update" : "webdriver-manager update",
+    "test": "protractor conf.js"
+
+  },
+  "dependencies": {
+    "@types/jasmine": "^3.5.6",
+    "chromedriver": "^80.0.1",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "faker": "^4.1.0",
+    "http-errors": "~1.6.3",
+    "ig": "0.0.5",
+    "jasmine-allure-reporter": "^1.0.2",
+    "morgan": "~1.9.1",
+    "protractor": "^5.4.3",
+    "pug": "2.0.0-beta11",
+    "selenium-webdriver": "^4.0.0-alpha.5"
+  },
+  "devDependencies": {
+    "allure-commandline": "^2.13.0"
+  }
+}
