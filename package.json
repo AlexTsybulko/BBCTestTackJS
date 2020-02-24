@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "tsc": "tsc",
-    "pretest": "npm run tsc && webdriver-manager update"    
+    "pretest": "npm run tsc && webdriver-manager update",    
     "test": "protractor conf.js"
   },
   "dependencies": {
