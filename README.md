@@ -15,5 +15,5 @@
 
 _Notes_
 - result screenshots are in allure-result folder
-- to generate allure report run 'allure serve ./' in allure-results folder (example report is attached to project root folder)
+- to generate allure report run 'allure serve ./' in allure-results folder (example report is attached to project root folder as allureResult.png)
 
