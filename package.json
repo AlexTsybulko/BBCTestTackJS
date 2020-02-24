@@ -5,7 +5,7 @@
   "scripts": {
     "tsc": "tsc",
     "pretest": "npm run tsc",
-    "webdriver-update" : "webdriver-manager update",
+    "pretest": "webdriver-manager update",
     "test": "protractor conf.js"
 
   },
