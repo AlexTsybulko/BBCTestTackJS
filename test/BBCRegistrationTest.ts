@@ -8,7 +8,7 @@ import {HomePage} from "../pages/HomePage";
 describe ('BBC Test Suite',  async () => {
     it('Check registration workflow', async () => {
 
-        const url = 'https://account.bbc.com/register'
+        const url = 'https://account.bbc.com/register';
         
         browser.waitForAngularEnabled(false);
         browser.driver.get(url);
