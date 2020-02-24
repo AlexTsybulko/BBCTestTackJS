@@ -13,6 +13,7 @@
 3. run 'npm install'
 4. run 'npm test'
 
+_Notes_
 - result screenshots are in allure-result folder
 - to generate allure report run 'allure serve ./' in allure-results folder (example report is attached to project root folder)
 
